@@ -47,6 +47,7 @@ const hoverEffectClasses = "after:content-[''] after:block after:w-0 after:h-0.5
           </>
         );
       case 'designs':
+      case 'recommendations':
         return (
           <>
             <li className={linkBaseClasses}>
@@ -81,15 +82,22 @@ const hoverEffectClasses = "after:content-[''] after:block after:w-0 after:h-0.5
           </ul>
           {/* Conditionally render the Upload Image button for the designs page */}
           {pageType === 'designs' && (
-            <button className={`text-xl font-md py-3 px-6 rounded-3xl ml-4 mr-6 bg-custom-nude`}> {/* Adjust the bg-custom-blue to your color */}
-              Upload Image
-            </button>
-          )}
+  <Link to="/recommendations" className="text-xl font-md py-3 px-6 rounded-3xl ml-4 mr-6 bg-custom-nude inline-block"> {/* Ensure your class names here match what you had for the button */}
+    Get Recommendation
+  </Link>
+)}
+
           {/* Show Book Appointment button for other pages except designs */}
-          {pageType !== 'designs' && (
+          {pageType === 'home' && (
             <button className={`text-xl font-md py-3 px-6 rounded-3xl ml-4 mr-6 bg-custom-nude`}>
               Book Appointment
             </button>
+           )}
+           
+           {pageType === 'recommendations' && (
+            <Link to="/recommendations" className="text-xl font-md py-3 px-6 rounded-3xl ml-4 mr-6 bg-custom-nude inline-block">
+              Recommendations
+            </Link>
           )}
           <button onClick={() => setOpen(!open)} className="lg:hidden">
             {open ? <XMarkIcon className="h-5 w-5 text-white" /> : <Bars3Icon className="h-5 w-5 text-white" />}

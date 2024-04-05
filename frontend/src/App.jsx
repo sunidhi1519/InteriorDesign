@@ -7,6 +7,7 @@ import Login from './pages/login';
 import HomePage from './pages/home';
 import Designs from './pages/designs';
 import UserDashboard from './pages/dashboard';
+import RecommendationsPage from './components/recommendations';
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
         { }
         <Route path="/" element={<HomePage />} />
         <Route path="/designs" element={<Designs />} />
-        <Route path="/dashboard" element={<UserDashboard/>} />
+        <Route path="/dashboard" element={<UserDashboard />} />
+        <Route path="/recommendations" element={<RecommendationsPage />} />
+
       </Routes>
     </Router> 
   )
