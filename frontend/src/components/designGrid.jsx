@@ -18,13 +18,14 @@ const DesignGrid = ({ designs, searchTerm }) => {
   };
 
   return (
-    <div className="px-12 py-8 ">
+    <div className="px-12 py-8">
       {designs.filter(({ space }) => space.toLowerCase().includes(searchTerm.toLowerCase())).map(({ space, images }) => (
-        <div key={space} className="py-12">
-          <h2 className="text-6xl font-semibold my-12 uppercase text-center dm-sans-md">{space}</h2>
+        // Adding an id attribute that matches the space name, which allows for direct navigation
+        <div key={space} id={space.replace(/\s+/g, '-').toLowerCase()} className="py-12">
+          <h2 className="text-6xl font-semibold my-12 schibsted-grotesk capitalize text-center">{space}</h2>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
             {images.map((image, index) => (
-              <img key={index} src={image} alt={space} className={`w-full h-auto object-cover rounded-md ${getImageSizeClass(index, images.length)}`} />
+              <img key={index} loading="lazy" src={image} alt={space} className={`w-full h-auto object-cover rounded-md ${getImageSizeClass(index, images.length)}`} />
             ))}
           </div>
         </div>

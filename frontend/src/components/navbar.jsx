@@ -90,7 +90,7 @@ const hoverEffectClasses = "after:content-[''] after:block after:w-0 after:h-0.5
           {/* Show Book Appointment button for other pages except designs */}
           {pageType === 'home' && (
             <button className={`text-xl font-md py-3 px-6 rounded-3xl ml-4 mr-6 bg-custom-nude`}>
-              Book Appointment
+              Browse Portfolios
             </button>
            )}
            

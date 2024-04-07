@@ -13,10 +13,10 @@ const ServiceCard = ({ title, description, linkText }) => {
   );
 };
 
-const Services = () => {
+const Services = ({id}) => {
   return (
     // Adjusted the min-h-screen for full height, and increased the bottom margin for more space between heading and cards
-    <div className="min-h-screen flex flex-col items-center justify-center py-20 w-full">
+    <div id={id} className="min-h-screen flex flex-col items-center justify-center py-20 w-full">
       <div className="container mx-auto px-14">
         <h2 className="text-6xl font-semibold mb-32 text-left text-black">Discover Our Services</h2> {/* Increased the margin bottom */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20">

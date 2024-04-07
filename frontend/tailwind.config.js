@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       colors: {
         'custom-nude': '#c79288',
+        'lavender': '#d0cce0',
+        'beige': '#e8e4e4',
       },
     },
   },

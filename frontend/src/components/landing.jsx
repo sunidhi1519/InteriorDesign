@@ -5,7 +5,7 @@ const Landing = () => {
     <div className="relative min-h-screen w-full" id="home">
       {/* Background with gradient */}
       <div className="absolute inset-0 z-0">
-        <img src="/tt.jpg" alt="Background" className="w-full h-full object-cover" />
+        <img src="/tt.jpg" alt="Background" loading='lazy' className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-transparent opacity-40"></div>
       </div>
       

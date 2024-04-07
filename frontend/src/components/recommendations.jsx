@@ -50,7 +50,7 @@ const RecommendationsPage = () => {
               <input type="file" accept="image/*" onChange={handleImageChange} className="hidden" />
             </label>
             <div style={{ height: selectedImage ? 'auto' : '0', transition: 'height 0.3s ease' }}>
-              {selectedImage && <p className="mt-8 text-4xl schibsted-grotesk text-white text-center bg-custom-nude p-4 rounded-md">Image Uploaded &#x2193;</p>}
+              {selectedImage && <p className="mt-8 text-3xl schibsted-grotesk text-white text-center bg-custom-nude p-4 rounded-md">Image Uploaded &#x2193;</p>}
             </div>
           </div>
         </div>
